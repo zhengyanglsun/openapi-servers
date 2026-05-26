@@ -18,7 +18,7 @@ No clone required. The server is a single `npx` invocation:
 export IFLOW_API_KEY="YOUR_IFLOW_API_KEY"
 
 # Run the server (binds to 0.0.0.0:8787 by default)
-npx -y @iflow-ai/search-openapi@next
+npx -y @iflow-ai/search-openapi
 ```
 
 Now visit:
@@ -26,7 +26,7 @@ Now visit:
 - 🖥️ Swagger UI / interactive docs: `http://localhost:8787/openapi.json` (raw spec)
 - ❤️ Health check: `http://localhost:8787/health`
 
-> The `@next` dist-tag is recommended during the pre-1.0 cycle. Pin to a specific version (e.g. `@iflow-ai/search-openapi@0.1.0-pre.1`) in production to keep upgrades intentional.
+> The current stable release on npm is `@iflow-ai/search-openapi@0.1.0` (the `latest` dist-tag). For reproducible installs, pin the version explicitly — e.g. `npx -y @iflow-ai/search-openapi@0.1.0`.
 
 ---
 
@@ -50,7 +50,7 @@ export IFLOW_API_KEY="YOUR_IFLOW_API_KEY"
 IFLOW_OPENAPI_CLIENT=open-webui \
   IFLOW_OPENAPI_CORS_ORIGIN='*' \
   PORT=8787 \
-  npx -y @iflow-ai/search-openapi@next
+  npx -y @iflow-ai/search-openapi
 ```
 
 ### Example: gated mode (server requires its own bearer)
@@ -61,7 +61,7 @@ export IFLOW_OPENAPI_AUTH_TOKEN="YOUR_OPENAPI_AUTH_TOKEN"
 
 IFLOW_OPENAPI_CLIENT=open-webui \
   PORT=8787 \
-  npx -y @iflow-ai/search-openapi@next
+  npx -y @iflow-ai/search-openapi
 ```
 
 In gated mode, every Open WebUI request must include
